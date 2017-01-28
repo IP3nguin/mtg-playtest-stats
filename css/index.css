@@ -1,0 +1,25 @@
+.panel {
+    padding-top: 10px;
+}
+
+.player-block {
+    text-align: center;
+}
+.btn-log {
+    background-color: #f69005;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #fca731;
+}
+
+.btn-log:hover,
+.btn-log:focus {
+    color: #fff;
+    background-color: #fca731;
+    border-color: #fca731;
+}

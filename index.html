@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+</head>
+<link rel="stylesheet" href="css/index.css">
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <!--Start Player1 Panel-->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group player-block">
+                                <select class="selectpicker" title="Player" data-width="auto">
+                                    <option>Conor</option>
+                                    <option>Maher</option>
+                                    <option>Deci</option>
+                                </select>
+
+                                <select class="selectpicker" title="Deck" data-width="auto">
+                                    <option>Jund</option>
+                                    <option>Grixis Delver</option>
+                                    <option>Affinity</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <p>
+                            </p>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+                                </span>
+                                <input type="number" name="quant[1]" class="form-control input-number" min="0" max="1000" placeholder="Wins">
+                                <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--End Player1 Panel-->
+                    <hr>
+                    <!--Start Player2 Panel-->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group player-block">
+                                <select class="selectpicker" title="Player" data-width="auto">
+                                    <option>Conor</option>
+                                    <option>Maher</option>
+                                    <option>Deci</option>
+                                </select>
+
+                                <select class="selectpicker" title="Deck" data-width="auto">
+                                    <option>Jund</option>
+                                    <option>Grixis Delver</option>
+                                    <option>Affinity</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <p>
+                            </p>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+                                </span>
+                                <input type="number" name="quant[2]" class="form-control input-number" min="0" max="1000" placeholder="Wins">
+                                <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--End Player2 Panel-->
+                    <hr>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <input type="submit" name="" id="" onclick="submitSession()" class="form-control btn btn-log" value="Submit Games">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCExaaUmAWde4tNVge4SDc1s5f22r3a-vU",
+            authDomain: "mtg-playtest-stats.firebaseapp.com",
+            databaseURL: "https://mtg-playtest-stats.firebaseio.com",
+            storageBucket: "mtg-playtest-stats.appspot.com",
+            messagingSenderId: "945555725842"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- load jquery -->
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+    <!-- load firebase -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="js/mainJs.js"></script>
+
+</body>
+
+</HTML>
