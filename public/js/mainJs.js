@@ -69,3 +69,78 @@ $(".input-number").keydown(function (e) {
             e.preventDefault();
         }
     });
+
+
+
+
+function submitSession() {
+    var playerName1 =  $('select[name=Player1]').val();
+    var playerName2 =  $('select[name=Player2]').val();
+    var deckName1 =  $('select[name=Deck1]').val();
+    var deckName2 =  $('select[name=Deck2]').val();
+    var playerWins1 = $("input[name='quant[1]']").val();
+    var playerWins2 = $("input[name='quant[2]']").val();
+
+    var databasewin1 = firebase.database().ref('decks/' + deckName1 +'/wins');
+    
+    databasewin1.transaction(function(wins) {
+            win = parseInt(playerWins1);
+            while(win >0){
+                wins = wins + 1;
+                win--;
+            }
+            return wins;
+        });
+    var databaselose1 = firebase.database().ref('decks/' + deckName1 +'/loses');
+    databaselose1.transaction(function(loses) {
+            lose = parseInt(playerWins2);
+            while(lose >0){
+                loses = loses + 1;
+                lose--;
+            }
+            return loses;
+        });
+    
+    var databasewin2 = firebase.database().ref('decks/' + deckName2 +'/wins');
+    
+    databasewin2.transaction(function(wins) {
+            win = parseInt(playerWins2);
+            while(win >0){
+                wins = wins + 1;
+                win--;
+            }
+            return wins;
+        });
+    var databaselose2 = firebase.database().ref('decks/' + deckName2 +'/loses');
+    databaselose2.transaction(function(loses) {
+            lose = parseInt(playerWins1);
+            while(lose >0){
+                loses = loses + 1;
+                lose--;
+            }
+            return loses;
+        });
+
+    var databasematch1 = firebase.database().ref('matchup/' + deckName1 + deckName2 + '/' + deckName1);
+    
+    databasematch1.transaction(function(wins) {
+            win = parseInt(playerWins1);
+            while(win >0){
+                wins = wins + 1;
+                win--;
+            }
+            return wins;
+        });
+    var databasematch2 = firebase.database().ref('matchup/' + deckName1 + deckName2 + '/' + deckName2);
+    
+    databasematch2.transaction(function(wins) {
+            win = parseInt(playerWins2);
+            while(win >0){
+                wins = wins + 1;
+                win--;
+            }
+            return wins;
+        });
+    
+    
+}

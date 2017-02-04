@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+
 </head>
 <link rel="stylesheet" href="css/index.css">
 
@@ -23,16 +24,28 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="form-group player-block">
-                                <select class="selectpicker" title="Player" data-width="auto">
-                                    <option>Conor</option>
-                                    <option>Maher</option>
-                                    <option>Deci</option>
+                                <select class="selectpicker" title="Player" name="Player1" data-width="auto">
+                                    <option value="Conor">Conor</option>
+                                    <option value="Maher">Maher</option>
+                                    <option value="Deci">Deci</option>
+                                    <option value="Shane">Shane</option>
+                                    <option value="Sean">Sean</option>
+                                    <option value="Anthony">Anthony</option>
+                                    <option value="Niall">Niall</option>
                                 </select>
 
-                                <select class="selectpicker" title="Deck" data-width="auto">
+                                <select class="selectpicker" title="Deck" name="Deck1" data-width="auto">
                                     <option>Jund</option>
                                     <option>Grixis Delver</option>
                                     <option>Affinity</option>
+                                    <option>Bant Eldrazi</option>
+                                    <option>TitanShift</option>
+                                    <option>Elves</option>
+                                    <option>Naya Burn</option>
+                                    <option>Lantern Control</option>
+                                    <option>Other1</option>
+                                    <option>Other2</option>
+                                    <option>Other3</option>
                                 </select>
                             </div>
                         </div>
@@ -64,16 +77,28 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="form-group player-block">
-                                <select class="selectpicker" title="Player" data-width="auto">
-                                    <option>Conor</option>
-                                    <option>Maher</option>
-                                    <option>Deci</option>
+                                <select class="selectpicker player" title="Player" name="Player2" data-width="auto">
+                                    <option value="Conor">Conor</option>
+                                    <option value="Maher">Maher</option>
+                                    <option value="Deci">Deci</option>
+                                    <option value="Shane">Shane</option>
+                                    <option value="Sean">Sean</option>
+                                    <option value="Anthony">Anthony</option>
+                                    <option value="Niall">Niall</option>
                                 </select>
 
-                                <select class="selectpicker" title="Deck" data-width="auto">
+                                <select class="selectpicker deck" title="Deck" name="Deck2" data-width="auto">
                                     <option>Jund</option>
                                     <option>Grixis Delver</option>
                                     <option>Affinity</option>
+                                    <option>Bant Eldrazi</option>
+                                    <option>TitanShift</option>
+                                    <option>Elves</option>
+                                    <option>Naya Burn</option>
+                                    <option>Lantern Control</option>
+                                    <option>Other1</option>
+                                    <option>Other2</option>
+                                    <option>Other3</option>
                                 </select>
                             </div>
                         </div>
@@ -118,7 +143,7 @@
 
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
     <script>
         // Initialize Firebase
         var config = {
@@ -131,10 +156,9 @@
         firebase.initializeApp(config);
 
     </script>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- load jquery -->
-    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
     <!-- load firebase -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
