@@ -140,7 +140,11 @@ function submitSession() {
                 win--;
             }
             return wins;
-        });
+        }).then(function (user) { 
+        
+        location.reload();
+
+    });
     
     
 }
